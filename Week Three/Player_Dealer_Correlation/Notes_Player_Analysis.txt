@@ -1,0 +1,8 @@
+Times losses occurred
+	0500, 0800, 1400, 2000, 2300
+
+Common player playing at the above times
+	Mylie Schmidt
+
+Number of times player was playing
+	13 times

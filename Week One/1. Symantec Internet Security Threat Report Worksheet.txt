@@ -1,0 +1,174 @@
+﻿Security 101 Homework: Security Reporting
+Part I: Symantec
+For Part 1 of your homework assignment, you should primarily use the Symantec Internet Security Threat Report along with independent research to answer the following questions.
+________________
+
+
+1. What is formjacking?
+   - The malicious use of Javascript code to steal credit card details, and other information from payments forms on order checkout pages
+
+
+2. How many websites are compromised each month with formjacking code? 
+   - 4,800 websites a month
+
+3. What is Powershell?
+   -cross platform task automation solution made up of command-line shell, a scriptiong language and configuration management framework
+
+
+4. What was the annual percentage increase in malicious Powershell scripts?
+   - 100%
+
+
+5. What is a coinminer?
+   - programs that mine cryptocurrency
+
+
+6. How much can data from a single credit card can be sold for? 
+   - $45
+
+7. How did Magecart successfully attack Ticketmaster? 
+   -compromised a third-party chatbot and loaded malicious code into visitors web browsers
+
+8. What is one reason why there has been a growth of formjacking? 
+   - drop in value of cryptocurrency
+
+9. Cryptojacking dropped by what percentage between January and December 2018?
+   - 52%
+
+10. If a web page contains a coinmining script, what happens? 
+   - page vistors computing power is used for mining cryptocurrrency
+
+11. How does an exploit kit work? 
+   - automates attacks of knowne vulnerabilites
+
+12. What does the criminal group SamSam specialize in? 
+   - Ransomware
+
+13. How many SamSam attacks did Symantec find evidence of in 2018? 
+   - 67
+
+14. Even though ransomware attacks declined in 2017-2018, what was one dramatic change that occurred? 
+   - Shift to Enterprises being the majority of infections
+
+15. In 2018, what was the primary ransomware distribution method? 
+   - email
+
+16. What operating systems do most types of ransomware attacks still target?
+   - Windows
+
+17. What are “living off the land” attacks? What is the advantage to hackers? 
+   - using off the shelf tools and operating features for hacking
+   - the tools are readily available
+
+18. What is an example of a tool that’s used in “living off the land” attacks?
+   -Powershell
+
+19. What are zero-day exploits?
+   - A recently found vulnerability in computer software 
+
+20. By what percentage did zero-day exploits decline in 2018? 
+   - 4%
+
+21. What are two techniques that worms such as Emotet and Qakbot use?
+   - dumping passwords from memory
+   - brute-force accessing network shares
+
+22. What are supply chain attacks? By how much did they increase in 2018?
+   - exploiting third-party services and software to compromise a final target
+   - 78%
+
+23. What challenge do supply chain attacks and living off the land attacks highlight for organizations? 
+   - Attacks are increasingly arriving through trusted channels
+
+24. The 20 most active groups tracked by Symantec targeted an average of how many organizations between 2016 and 2018? 
+   - 55
+
+25. How many individuals or organizations were indicted for cyber criminal activities in 2018? What are some of the countries that these entities were from? 
+   - 49
+
+26. When it comes to the increased number of cloud cybersecurity attacks, what is the common theme? 
+   - poorly coniguration
+
+27. What is the implication for successful cloud exploitation that provides access to memory locations that are normally forbidden? 
+   - Data being leaked from several cloud instances 
+
+28. What are two examples of the above cloud attack? 
+   - Spectre
+   - Meltdown
+
+29. Regarding Internet of Things (IoT) attacks, what were the two most common infected devices and what percentage of IoT attacks were attributed to them? 
+   - Routers
+   - connected cameras
+
+30. What is the Mirai worm and what does it do? 
+   - DDOS attack
+
+31. Why was Mirai the third most common IoT threat in 2018? 
+   - continually evolves by adding new variants and exploits 
+
+32. What was unique about VPNFilter with regards to IoT threats?
+   - It's ability survive reboot
+
+33. What type of attack targeted the Democratic National Committee in 2019? 
+   - spear-phishing
+
+34. What were 48% of  malicious email attachments in 2018? 
+   - email attachments
+
+35. What were the top two malicious email themes in 2018? 
+   - email disguised as notification
+   - attached office file contains malicious script
+
+36. What was the top malicious email attachment type in 2018? 
+   - Office files
+
+37. Which country had the highest email phishing rate? Which country had the lowest email phishing rate?
+   - Saudi Arabia
+   - Japan
+
+38. What is Emotet and how much did it jump in 2018? 
+   - self propagating worm
+   - 16%
+
+39. What was the top malware threat of the year? How many of those attacks were blocked?
+   - Heur.AdvML.C
+   - 52.1% (43,999,373 attempts)
+
+40. Malware primarily attacks which type of operating system? 
+   - Windows
+
+41. What was the top coinminer of 2018 and how many of those attacks were blocked? 
+   - JS.Webcoinminer
+   - 49.7% (2,768,721 attacks)
+
+42. What were the top three financial Trojans of 2018? 
+   - Ramnit
+   - Zbot
+   - Emotet
+
+43. What was the most common avenue of attack in 2018? 
+   - Spear-fishing emails
+
+44. What is destructive malware? By what percent did these attacks increase in 2018? 
+   - exploit that will 'brick' or wipe a device
+   - 25%
+
+45. What was the top user name used in IoT attacks? 
+   -root 
+
+46. What was the top password used in IoT attacks? 
+   - 123456
+
+47. What were the top three protocols used in IoT attacks? What were the top two ports used in IoT attacks? 
+   - telnet
+   - http
+   - https
+
+48. In the underground economy, how much can someone get for the following? 
+
+
+1. Stolen or fake identity: $.10 - 1.50
+2. Stolen medical records: $.10 - 35
+3. Hacker for hire: $100+
+4. Single credit card with full details: $1 -45
+5. 500 social media followers: $2 - 6

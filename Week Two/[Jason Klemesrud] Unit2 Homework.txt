@@ -1,0 +1,82 @@
+Step 1: Measure and Set Goals
+Answer the following questions:
+Using outside research, indicate the potential security risks of allowing employees to access work information on their personal devices. Identify at least three potential attacks that can be carried out.
+    Rooted or Jailbroken devices - These devices could have a virus or malware on them. 
+    Malfomed content - Users can exploit known vulnerabilites in applications running on the employees BYOD device and gain access to corporate network and/or data.
+    Lost or stolen devices - If the devices done have a bio-metric or key password setup, whomever that finds the device can access company data and network
+    OS related vulnerabilities - Unpatched OS vulnerabilities can provide hackers a way into a employees BYOD device and then access to the companies network and data
+    Malicious applications - Employees can unknowingly install malicious applications that snoops on their traffic and provide access to the hacker of company resources
+        (Source - https://resources.infosecinstitute.com/topic/ethical-hacking-byod-vulnerabilities/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A%20infosecResources%20%28InfoSec%20Resources%29 )
+
+Based on the above scenario, what is the preferred employee behavior? For the employee to use only company provided devices.
+
+What methods would you use to measure how often employees are currently not behaving according to the preferred behavior?
+- Parse access logs for email server, company applicaitons, and VPN logs to get a total of number of unique devices, versions of OS being used to access internal resources
+
+What is the goal that you would like the organization to reach regarding this behavior? 
+- Have 80% of the employees in compliance with the policy.
+
+For example, to have less than 5% of employees downloading suspicious email attachments.
+
+
+Step 2: Involve the Right People
+Now that you have a goal in mind, who needs to be involved?
+ - HR - Make sure policy meets labor laws and we have actionable process for if a employee becomes problematic and can't/doesn't follow the policy.
+ - IT - logistics of implementing a solution and/or tracking metrics on effectiveness
+ - finance - approve and allocate budget for the solution and training
+ - department heads - they will provide input on if a solution will work for thier team and what problems/benefits it will have to their team(s) in doing their daily work
+ - security team - they will provide 
+
+Indicate at least five employees or departments that need to be involved. For each person or department, indicate in 2-3 sentences what their role and responsibilities will be.
+
+
+Step 3: Training Plan
+Training is part of any security culture framework plan. How will you train your employees on this security concern? In one page, indicate the following:
+
+
+How frequently will you run training? What format will it take? (i.e. in-person, online, a combination of both)
+- Training will be done in-person with an online option for remote workers. Training will occur on a quarterly basis along with being part of the new hire security training given to new employees. 
+
+
+What topics will you cover in your training and why? (This should be the bulk of the deliverable.)
+    Describe the minimum security controls for devices
+        Enabling password lock or biometric lock on the devices 
+        Data encryption enabled on the devices
+        Screen lockout after a period of inactivity
+
+    Keeping operating systems up to date and patched - This will teach employees about how to keep their devices updated and using the latest OS and 
+
+    Acceptable use of BYOD devices on the company network and applications - This will let the employees know what applications, networks services and applications they are allowed to run while connected to the company network.
+    
+    Have attendees to the training sign documentation that they have recieved training on the policies regarding using BYOD on the company network.
+
+After you’ve run your training, how will you measure its effectiveness?
+- Parse VPN access logs and aggregate data by user and device to see what percentage of compliance employees are with the policies
+
+
+This portion will require additional outside research on the topic so that you can lay out a clear and thorough training agenda.
+
+Bonus: Other Solutions
+Training alone often isn't the entire solution to a security concern.
+
+
+Indicate at least two other potential solutions. For each one, indicate the following:
+- Mobile Device Management (MDM) solution to manage and monitory BYOD devices
+- Approval process for employees to use BYOD devices
+
+What type of control is it? Administrative, technical, or physical?
+- MDM would be a technical control
+- Approval process woudl be a administrative control
+
+
+What goal does this control have? Is it preventive, deterrent, detective, corrective, or compensating?
+- MDM would be a detective control since it will monitor usage of company resources BYOD devices are accessing
+- 
+
+
+What is one advantage of each solution?
+- 
+
+What is one disadvantage of each solution?
+- MDM would have a cost factor for purchasing a solution and also for the role out of the solution 
+- Approval process would add extra work and documentation to managers and IT staff.

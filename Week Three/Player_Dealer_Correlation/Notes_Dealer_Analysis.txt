@@ -1,0 +1,5 @@
+Primary Dealer working during losses
+	Billy Jones
+
+How many times this dealer worked during losses: 15
+

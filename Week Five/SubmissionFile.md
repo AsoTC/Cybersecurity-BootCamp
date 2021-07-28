@@ -8,39 +8,50 @@ Save and submit the completed file for your homework submission.
 
 ### Step 1: Create, Extract, Compress, and Manage tar Backup Archives
 
-1. Command to **extract** the `TarDocs.tar` archive to the current directory:
+1. Command to **extract** the `TarDocs.tar` archive to the current directory: `tar xvf TarDocs.tar`
 
-2. Command to **create** the `Javaless_Doc.tar` archive from the `TarDocs/` directory, while excluding the `TarDocs/Documents/Java` directory:
+2. Command to **create** the `Javaless_Doc.tar` archive from the `TarDocs/` directory, while excluding the `TarDocs/Documents/Java` directory: `tar cvf Javaless_Docs.tar --exclude 'TarDocs/Documents/Java' TarDocs/Documents`
 
-3. Command to ensure `Java/` is not in the new `Javaless_Docs.tar` archive:
+3. Command to ensure `Java/` is not in the new `Javaless_Docs.tar` archive: `tar tvf Javaless_Docs.tar | grep -i "Java"`
 
 **Bonus** 
 - Command to create an incremental archive called `logs_backup_tar.gz` with only changed files to `snapshot.file` for the `/var/log` directory:
 
 #### Critical Analysis Question
 
-- Why wouldn't you use the options `-x` and `-c` at the same time with `tar`?
+- Why wouldn't you use the options `-x` and `-c` at the same time with `tar`?  You can end up in a infinte loop of extracting files which then get added back into the tar file being created
 
 ---
 
 ### Step 2: Create, Manage, and Automate Cron Jobs
 
-1. Cron job for backing up the `/var/log/auth.log` file:
+1. Cron job for backing up the `/var/log/auth.log` file: `* 6 * * 3 tar czf auth_backup.tgz /var/log/auth.log >/dev/null 2>&1`
 
 ---
 
 ### Step 3: Write Basic Bash Scripts
 
-1. Brace expansion command to create the four subdirectories:
+1. Brace expansion command to create the four subdirectories: `mkdir -p ~/backups/{freemem,diskuse,openlist,freedisk}`
 
 2. Paste your `system.sh` script edits below:
 
     ```bash
     #!/bin/bash
-    [Your solution script contents here]
+    # Free memory output to a free_mem.txt file
+    free -h >> ~/backups/freemem/free_mem.txt
+
+    # Disk usage output to a disk_usage.txt file
+    du -h >> ~/backups/diskuse/disk_usage.txt
+
+    # List open files to a open_list.txt file
+    lsof >> ~/backups/openlist/open_list.txt
+
+    # Free disk space to a free_disk.txt file
+    df -h >> ~/backups/freedisk/free_disk.txt
+
     ```
 
-3. Command to make the `system.sh` script executable:
+3. Command to make the `system.sh` script executable: `chmod +x system.sh`
 
 **Optional**
 - Commands to test the script and confirm its execution:

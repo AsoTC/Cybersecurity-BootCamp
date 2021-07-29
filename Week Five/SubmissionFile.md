@@ -54,7 +54,7 @@ Save and submit the completed file for your homework submission.
 3. Command to make the `system.sh` script executable: `chmod +x system.sh`
 
 **Optional**
-- Commands to test the script and confirm its execution:
+- Commands to test the script and confirm its execution: `sudo ./system.sh`
 
 **Bonus**
 - Command to copy `system` to system-wide cron directory:
@@ -68,6 +68,13 @@ Save and submit the completed file for your homework submission.
     Configure a log rotation scheme that backs up authentication messages to the `/var/log/auth.log`.
 
     - Add your config file edits below:
+    /var/log/auth.log {
+        weekly
+        rotate 7
+        notifempty
+        delaycompress
+        missingok
+    }
 
     ```bash
     [Your logrotate scheme edits here]
@@ -76,7 +83,7 @@ Save and submit the completed file for your homework submission.
 
 ### Bonus: Check for Policy and File Violations
 
-1. Command to verify `auditd` is active:
+1. Command to verify `auditd` is active: `service auditd status`
 
 2. Command to set number of retained logs and maximum log file size:
 

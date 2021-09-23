@@ -34,9 +34,9 @@ Name each of the seven stages for the Cyber Kill chain and provide a brief examp
 
 1. Stage 1: Reconnaissance - scanning a network for open ports
 
-2. Stage 2: Weaponization - 
+2. Stage 2: Weaponization - creating a powershell script to exploit a vulnerability found from Stage 1
 
-3. Stage 3: Delivery -
+3. Stage 3: Delivery - 
 
 4. Stage 4: Exploitation -
 
@@ -112,7 +112,7 @@ Before getting started, you should verify that you do not have any instances of 
 - Run the command that removes any running instance of `ufw`.
 
     ```bash
-    $ <ADD COMMAND HERE>
+    sudo apt remove ufw
     ```
 
 #### Enable and start `firewalld`
@@ -122,8 +122,8 @@ By default, these service should be running. If not, then run the following comm
 - Run the commands that enable and start `firewalld` upon boots and reboots.
 
     ```bash
-    $ <ADD COMMAND TO enable firewalld HERE>
-    $ <ADD COMMAND TO  start firewalld HERE>
+    sudo systemctl enable firewalld
+    sudo systemctl start firewalld
     ```
 
   Note: This will ensure that `firewalld` remains active after each reboot.
@@ -133,7 +133,7 @@ By default, these service should be running. If not, then run the following comm
 - Run the command that checks whether or not the `firewalld` service is up and running.
 
     ```bash
-    $ <ADD COMMAND HERE>
+    sudo systemctl status firewalld
     ```
 
 
@@ -144,7 +144,7 @@ Next, lists all currently configured firewall rules. This will give you a good i
 - Run the command that lists all currently configured firewall rules:
 
     ```bash
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --list-all
     ```
 
 - Take note of what Zones and settings are configured. You many need to remove unneeded services and settings.
@@ -154,7 +154,7 @@ Next, lists all currently configured firewall rules. This will give you a good i
 - Run the command that lists all currently supported services to see if the service you need is available
 
     ```bash
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --get-service
     ```
 
 - We can see that the `Home` and `Drop` Zones are created by default.
@@ -165,7 +165,7 @@ Next, lists all currently configured firewall rules. This will give you a good i
 - Run the command that lists all currently configured zones.
 
     ```bash
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --get-zones
     ```
 
 - We can see that the `Public` and `Drop` Zones are created by default. Therefore, we will need to create Zones for `Web`, `Sales`, and `Mail`.
@@ -175,9 +175,9 @@ Next, lists all currently configured firewall rules. This will give you a good i
 - Run the commands that creates Web, Sales and Mail zones.
 
     ```bash
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --new-zone=Web --permanent
+    sudo firewall-cmd --new-zone=Sales --permanent
+    sudo firewall-cmd --new-zone=Mail --permanent
     ```
 
 #### Set the zones to their designated interfaces:
@@ -185,10 +185,10 @@ Next, lists all currently configured firewall rules. This will give you a good i
 - Run the commands that sets your `eth` interfaces to your zones.
 
     ```bash
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --change-interface=ETH0 --zone=Public --permanent
+    sudo firewall-cmd --change-interface=ETH1 --zone=Web --permanent
+    sudo firewall-cmd --change-interface=ETH2 --zone=Sales --permanent>
+    sudo firewall-cmd --change-interface=ETH3 --zone=Mail --permanent
     ```
 
 #### Add services to the active zones:
@@ -198,29 +198,29 @@ Next, lists all currently configured firewall rules. This will give you a good i
 - Public:
 
     ```bash
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --permanent -zone=public --add-service=http
+    sudo firewall-cmd --permanent -zone=public --add-service=https
+    sudo firewall-cmd --permanent -zone=public --add-service=pop3
+    sudo firewall-cmd --permanent -zone=public --add-service=smtp
     ```
 
 - Web:
 
     ```bash
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --permanent -zone=web --add-service=http
     ```
 
 - Sales
 
     ```bash
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --permanent -zone=sales --add-service=https
     ```
 
 - Mail
 
     ```bash
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --permanent -zone=mail --add-service=smtp
+    sudo firewall-cmd --permanent -zone=mail --add-service=pop3
     ```
 
 - What is the status of `http`, `https`, `smtp` and `pop3`?
@@ -230,9 +230,9 @@ Next, lists all currently configured firewall rules. This will give you a good i
 - Run the command that will add all current and any future blacklisted IPs to the Drop Zone.
 
      ```bash
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --add-rich-rule='rule family=ipv4 source address=10.208.56.23 reject' --permanent
+    sudo firewall-cmd --add-rich-rule='rule family=ipv4 source address=135.95.103.76 reject' --permanent
+    sudo firewall-cmd --add-rich-rule='rule family=ipv4 source address=76.34.169.118 reject' --permanent
     ```
 
 #### Make rules permanent then reload them:
@@ -242,7 +242,7 @@ It's good practice to ensure that your `firewalld` installation remains nailed u
 - Run the command that reloads the `firewalld` configurations and writes it to memory
 
     ```bash
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --reload
     ```
 
 #### View active Zones
@@ -252,7 +252,7 @@ Now, we'll want to provide truncated listings of all currently **active** zones.
 - Run the command that displays all zone services.
 
     ```bash
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --get-active-zones
     ```
 
 
@@ -261,7 +261,7 @@ Now, we'll want to provide truncated listings of all currently **active** zones.
 - Use a rich-rule that blocks the IP address `138.138.0.3`.
 
     ```bash
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --add-rich-rule='rule family=ipv4 source address=138.138.0.3 reject' --permanent
     ```
 
 #### Block Ping/ICMP Requests
@@ -271,7 +271,7 @@ Harden your network against `ping` scans by blocking `icmp ehco` replies.
 - Run the command that blocks `pings` and `icmp` requests in your `public` zone.
 
     ```bash
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --permanent --zone=public --add-icmp-block-inversion
     ```
 
 #### Rule Check
@@ -281,11 +281,10 @@ Now that you've set up your brand new `firewalld` installation, it's time to ver
 - Run the command that lists all  of the rule settings. Do one command at a time for each zone.
 
     ```bash
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
-    $ <ADD COMMAND HERE>
+    sudo firewall-cmd --zone=public --list-all
+    sudo firewall-cmd --zone=web --list-all
+    sudo firewall-cmd --zone=sales --list-all
+    sudo firewall-cmd --zone=mail --list-all
     ```
 
 - Are all of our rules in place? If not, then go back and make the necessary modifications before checking again.

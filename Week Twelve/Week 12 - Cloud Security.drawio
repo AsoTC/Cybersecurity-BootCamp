@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-27T11:14:21.296Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="ZaJRCbs2QuxexR80Gwig" version="15.3.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-27T11:16:51.042Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="8ucvRiHfHnrf_NjEUywa" version="15.3.2" type="github">
   <diagram id="HTMUwd_s12ywtiQb2sL4" name="Page-1">
     <mxGraphModel dx="1550" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -55,8 +55,8 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="1xD5PDsMJuq3n_WsqEgS-16" value="SSH&amp;nbsp;&lt;br&gt;Traffic" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="LvsWlQzkbfCYbf-eFKxt-10">
-          <mxGeometry x="760" y="420" width="40" height="20" as="geometry" />
+        <mxCell id="1xD5PDsMJuq3n_WsqEgS-16" value="SSH&amp;nbsp;&lt;br&gt;Traffic" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="LvsWlQzkbfCYbf-eFKxt-10">
+          <mxGeometry x="760" y="410" width="50" height="30" as="geometry" />
         </mxCell>
         <mxCell id="1xD5PDsMJuq3n_WsqEgS-8" value="" style="group" vertex="1" connectable="0" parent="LvsWlQzkbfCYbf-eFKxt-10">
           <mxGeometry x="480" y="70" width="190" height="290" as="geometry" />
@@ -108,14 +108,14 @@
         <mxCell id="LvsWlQzkbfCYbf-eFKxt-2" value="JumpBoxProvisioner&lt;br&gt;Internal IP : 10.0.0.4&lt;br&gt;External IP: 104.42.121.165" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.virtual_machine;" parent="1xD5PDsMJuq3n_WsqEgS-9" vertex="1">
           <mxGeometry y="6" width="50" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="1xD5PDsMJuq3n_WsqEgS-21" value="HTTP&amp;nbsp; Traffic" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;glass=0;sketch=0;" vertex="1" parent="LvsWlQzkbfCYbf-eFKxt-10">
-          <mxGeometry x="310" y="190" width="40" height="20" as="geometry" />
+        <mxCell id="1xD5PDsMJuq3n_WsqEgS-21" value="HTTP&amp;nbsp; Traffic" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;glass=0;sketch=0;" vertex="1" parent="LvsWlQzkbfCYbf-eFKxt-10">
+          <mxGeometry x="310" y="180" width="50" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="1xD5PDsMJuq3n_WsqEgS-22" value="SSH&amp;nbsp;&lt;br&gt;Traffic" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="LvsWlQzkbfCYbf-eFKxt-10">
-          <mxGeometry x="360" y="470" width="40" height="20" as="geometry" />
+        <mxCell id="1xD5PDsMJuq3n_WsqEgS-22" value="SSH&amp;nbsp;&lt;br&gt;Traffic" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="LvsWlQzkbfCYbf-eFKxt-10">
+          <mxGeometry x="360" y="460" width="50" height="30" as="geometry" />
         </mxCell>
-        <UserObject label="Red Team VLAN&lt;br&gt;Address Space :10.0.0.0/16&lt;br&gt;Subnet Range : 10.0.0.0/24" placeholders="1" name="Variable" id="1xD5PDsMJuq3n_WsqEgS-24">
-          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;sketch=0;" vertex="1" parent="LvsWlQzkbfCYbf-eFKxt-10">
+        <UserObject label="Red Team VLAN&lt;br&gt;Address Space :10.0.0.0/16&lt;br&gt;Subnet Range : 10.0.0.0/24&lt;br&gt;10.0.0.1 - 10.0.0.254" placeholders="1" name="Variable" id="1xD5PDsMJuq3n_WsqEgS-24">
+          <mxCell style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;sketch=0;" vertex="1" parent="LvsWlQzkbfCYbf-eFKxt-10">
             <mxGeometry x="30" y="90" width="200" height="80" as="geometry" />
           </mxCell>
         </UserObject>

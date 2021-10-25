@@ -108,7 +108,7 @@ SSH into the control node and follow the steps below:
 2. Where do you copy it? Copy it to ``` /etc/ansible ``` directory on the Ansible docker container running on the jump box
 3. Which file do you update to make Ansible run the playbook on a specific machine? hosts file in the ``` /etc/ansible/ ``` directory 
 4. How do I specify which machine to install the ELK server on versus which to install Filebeat on? In the ansible script you set which set of servers the script runs on. In this case the "hosts" value is set to "webservers" which is the meta tag that the web servers ip addresses are defined under.
-5. Which URL do you navigate to in order to check that the ELK server is running? http://{SEVER_PUBLIC_IP_ADDR}:5601/app/kibana#/home
+5. Which URL do you navigate to in order to check that the ELK server is running? http://{ELK_SEVER_PUBLIC_IP_ADDR}:5601/app/kibana#/home
 
 
 

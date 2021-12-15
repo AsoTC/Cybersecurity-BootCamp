@@ -30,9 +30,7 @@ The following vulnerabilities were identified on each target:
   - Vulnerabilities
   - CVE-2015-5600 - SSH brute force attacks
   - CVE-2020-14145 - SSH Man in the middle attacks
-  - 
 
-_TODO: Include vulnerability scan results to prove the identified vulnerabilities._
 
 ### Exploitation
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:

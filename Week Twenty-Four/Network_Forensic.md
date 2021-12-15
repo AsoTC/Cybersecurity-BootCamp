@@ -1,16 +1,17 @@
 # Network Forensic Analysis Report
 
-_TODO_ Complete this report as you complete the Network Activity on Day 3 of class.
 
 ## Time Thieves 
 You must inspect your traffic capture to answer the following questions:
 
 1. What is the domain name of the users' custom site? frank-n-ted.com
+  ![image](./images/time_thief_domain_controller.png)
 2. What is the IP address of the Domain Controller (DC) of the AD network? 10.6.12.12
 3. What is the name of the malware downloaded to the 10.6.12.203 machine? june11.dll
    - Once you have found the file, export it to your Kali machine's desktop.
 4. Upload the file to [VirusTotal.com](https://www.virustotal.com/gui/). 
 5. What kind of malware is this classified as? Trojan 
+
 
 ---
 
@@ -26,7 +27,8 @@ You must inspect your traffic capture to answer the following questions:
 4. As a bonus, retrieve the desktop background of the Windows host.
 
 ---
-
+![image](./images/user_vuln_windows_machine.png)
+g
 ## Illegal Downloads
 
 1. Find the following information about the machine with IP address `10.0.0.201`:
@@ -35,3 +37,5 @@ You must inspect your traffic capture to answer the following questions:
     - OS version Windows NT 10.0 Win64 x64
 
 2. Which torrent file did the user download? Betty Boop Rhythm on the Reservation.avi.torrent
+
+![image](./images/illegal_downloads_user.png)
